@@ -36,16 +36,16 @@ class MenuState {
 	}
 	
 	createUi() {
-		this.titleText = this.game.add.text(this.game.world.width - 20, 60, 'Elephant', { font: '128px ' + this.game.theme.font, fill: '#ffffff', align: 'right'})
+		this.titleText = this.game.add.text(this.game.world.width - 20, 20, 'Elephant', { font: '128px ' + this.game.theme.font, fill: '#ffffff', align: 'right'})
 		this.titleText.anchor.setTo(1.0, 0)
 		
-		this.subTitleText = this.game.add.text(this.game.world.width - 20, 220, 'in "The Room"', { font: '64px ' + this.game.theme.font, fill: '#ffffff', align: 'right'})
+		this.subTitleText = this.game.add.text(this.game.world.width - 20, 180, 'in "The Room"', { font: '64px ' + this.game.theme.font, fill: '#ffffff', align: 'right'})
 		this.subTitleText.anchor.setTo(1.0, 0)
 		
-		this.featuringText = this.game.add.text(this.game.world.width - 20, 320, 'featuring Johny and Lisa', { font: '32px ' + this.game.theme.font, fill: '#ffffff', align: 'right'})
+		this.featuringText = this.game.add.text(this.game.world.width - 20, 280, 'featuring Johny and Lisa', { font: '32px ' + this.game.theme.font, fill: '#ffffff', align: 'right'})
 		this.featuringText.anchor.setTo(1.0, 0)
 		
-		this.featuringText = this.game.add.text(this.game.world.width - 20, 360, 'as really bad art', { font: '16px ' + this.game.theme.font, fill: '#ffffff', align: 'right'})
+		this.featuringText = this.game.add.text(this.game.world.width - 20, 320, 'as really bad art', { font: '16px ' + this.game.theme.font, fill: '#ffffff', align: 'right'})
 		this.featuringText.anchor.setTo(1.0, 0)
 		
 		this.helpText = this.game.add.text(20, this.game.world.height - 150, 'Use left, right arrows to move\npress and hold up to power up jump\nyou get points for crushing your roomates\nwithout beeing spoted (you can only hit them from above and run)', { font: '18px ' + this.game.theme.font, fill: '#ffffff', align: 'left', stroke: '#000000', strokeThickness: 8})

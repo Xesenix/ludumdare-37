@@ -1,7 +1,9 @@
 class BootState {
 	preload() {
 		console.log('boot state')
+		this.stage.disableVisibilityChange = true;
 	
+		this.loaded = 0
 		this.game.add.plugin(Fabrique.Plugins.Spine)
 		
 		// setup fonts and interface apperance
@@ -15,7 +17,9 @@ class BootState {
 		}
 		
 		window.WebFontConfig = {
-			active: () => { this.game.time.events.add(Phaser.Timer.SECOND, this.onFontsReady)},
+			active: () => { 
+				this.game.time.events.add(Phaser.Timer.SECOND, this.onLoadComplete)
+			},
 			google: {
 				families: [ this.game.theme.font ]
 			}
@@ -26,8 +30,10 @@ class BootState {
 		this.load.script("webfont", "//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js")
 	}
 	
-	onLoadComplete() {
-		this.game.state.start('preload');
+	onLoadComplete = () => {
+		if (++this.loaded === 2) {
+			this.game.state.start('preload');
+		}
 	}
 }
 

@@ -132,21 +132,21 @@ class GameState {
 	}
 	
 	onKnockDownPoints = (character) => {
-		console.log('knock down ', this.score, character)
+		//console.log('knock down ', this.score, character)
 		this.score += character.speed / 10
 	}
 	
 	update() {
 		this.game.physics.arcade.overlap(this.elephantCharacter, this.enemies, (elephantCharacter, otherCharacter) => {
 			if (elephantCharacter.isSmashing()) {
-				console.log('smash', elephantCharacter.body.velocity.y)
+				//console.log('smash', elephantCharacter.body.velocity.y)
 				if (elephantCharacter.body.velocity.y > 500) {
 					otherCharacter.knockOut()
 					//elephantCharacter.body.velocity.y *= -1
 				}
 			} else if (!otherCharacter.isKnockOut()) {
 				elephantCharacter.touched()
-				console.log('ouch', elephantCharacter.body.velocity.y)
+				//console.log('ouch', elephantCharacter.body.velocity.y)
 			}
 		})
 		

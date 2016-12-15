@@ -4,7 +4,7 @@ import gameConstructor from 'js/game'
 
 export default class Game extends React.Component {
 	componentDidMount() {
-		gameConstructor(980, 600)
+		gameConstructor(900, 600)
 	}
 	
 	storeContainer = (container) => { this.gameContainer = container }
